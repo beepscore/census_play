@@ -35,7 +35,7 @@ has code samples downloadable data files
 https://dabeaz.com/pydata/
 https://www.youtube.com/watch?v=RrPZza_vZ3w
 
-#### beepscore repo based on Beazly Do tutorial Learn Python Through Public Data Hacking
+#### beepscore repo based on Beazley Do tutorial Learn Python Through Public Data Hacking
 https://github.com/beepscore/Learn-Python-Through-Public-Data-Hacking
 
 ## GeoPandas
