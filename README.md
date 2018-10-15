@@ -61,13 +61,20 @@ https://ocefpaf.github.io/python4oceanographers/blog/2015/08/24/choropleth/
 ## Data sources
 
 ### Wikipedia
+#### List of states and territories of the United States by population
 https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population
+
+#### List of states and territories of the United States by population density
+https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population_density
 
 ### US Census
 US Census has many databases and apis. So many it can be difficult to find what you want!
 
 #### Cartographic Boundary Shapefiles - States
 https://www.census.gov/geo/maps-data/data/cbf/cbf_state.html
+
+#### State Area Measurements and Internal Point Coordinates
+https://www.census.gov/geo/reference/state-area.html
 
 #### api
 https://www.census.gov/data/developers/guidance/api-user-guide.html
