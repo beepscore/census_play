@@ -61,7 +61,7 @@ https://ocefpaf.github.io/python4oceanographers/blog/2015/08/24/choropleth/
 ## Data sources
 
 ### Wikipedia
-https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population.html
+https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population
 
 ### US Census
 US Census has many databases and apis. So many it can be difficult to find what you want!
