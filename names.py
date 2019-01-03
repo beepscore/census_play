@@ -49,7 +49,7 @@ class Names:
 
         # use pandas to get data
         # https://stackoverflow.com/questions/42138966/pandas-read-csv-ignore-commas-one-column-per-line
-        df_last = pd.read_csv(filename, sep=',')
+        df_last = pd.read_csv(filename, sep=',', header=None)
         # df_last = pd.read_csv(filename)
         series_last = df_last.iloc[:, 0]
         series_last.dropna(inplace=True)
