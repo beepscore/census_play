@@ -6,9 +6,8 @@ class TestNames(unittest.TestCase):
 
     def test_get_first_female_names_len(self):
         first_female_names = names.Names.get_first_female_names()
-        self.assertEqual(len(first_female_names), 4273)
+        self.assertEqual(len(first_female_names), 4274)
 
-    # TODO: fix method or data file so this test passes
     def test_get_first_female_names_gets_first_name(self):
         first_female_names = names.Names.get_first_female_names()
         self.assertTrue('Mary'.upper() in first_female_names)

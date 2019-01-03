@@ -32,7 +32,7 @@ class Names:
         filename = './data/names/dist.female.first'
 
         # use pandas to get data
-        df = pd.read_csv(filename, sep=' ')
+        df = pd.read_csv(filename, sep=' ', header=None)
         series = df.iloc[:, 0]
         series.dropna(inplace=True)
 
@@ -61,12 +61,11 @@ class Names:
 
 if __name__ == "__main__":
 
-    pass
     names = Names()
     names.populate_names()
     print(names.first_female)
     print(names.last_2010)
-    #
+
     if 'Kathy'.upper() in names.first_female:
         print('found Kathy')
     if 'smith'.upper() in names.last_2010:
