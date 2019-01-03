@@ -79,3 +79,10 @@ https://www.census.gov/geo/reference/state-area.html
 #### api
 https://www.census.gov/data/developers/guidance/api-user-guide.html
 
+#### names
+##### 1990
+https://www.census.gov/topics/population/genealogy/data/1990_census/1990_census_namefiles.html
+##### 2010
+https://www.census.gov/topics/population/genealogy/data/2010_surnames.html
+Names_2010Census_Top1000.xlsx
+
