@@ -45,7 +45,7 @@ def get_last_names_1990():
     # df_last = pd.read_csv(filename)
     series = series.str.strip()
 
-    # convert pandas series to set, store in instance variable
+    # convert pandas series to set
     return set(series)
 
 
@@ -64,7 +64,7 @@ def get_last_names_2010():
     series_last.dropna(inplace=True)
     series_last = series_last.str.strip()
 
-    # convert pandas series to set, store in instance variable
+    # convert pandas series to set
     return set(series_last)
 
 
