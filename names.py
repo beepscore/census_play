@@ -30,9 +30,28 @@ def get_first_female_names():
     return set(series)
 
 
+def get_last_names_1990():
+    """
+    reads data file containing last names from 1990 census
+    :return: set containing last names
+    """
+    filename = './data/names/dist.all.last'
+
+    # use pandas to get data
+    # https://stackoverflow.com/questions/42138966/pandas-read-csv-ignore-commas-one-column-per-line
+    df = pd.read_csv(filename, sep=',', header=None)
+    series = df.iloc[:, 0]
+    series.dropna(inplace=True)
+    # df_last = pd.read_csv(filename)
+    series = series.str.strip()
+
+    # convert pandas series to set, store in instance variable
+    return set(series)
+
+
 def get_last_names_2010():
     """
-    reads data file containing last names
+    reads data file containing last names from 2010 census
     :return: set containing last names
     """
     filename = './data/names/Names_2010Census_Top1000.csv'
