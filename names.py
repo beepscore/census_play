@@ -13,9 +13,22 @@ class Names:
     # https://stackoverflow.com/questions/7571635/fastest-way-to-check-if-a-value-exist-in-a-list
     # alternatively could search a pandas dataframe or series
     first_female = {}
-    last = {}
+    last_2010 = {}
 
-    def populate_first_female(self):
+    def populate_names(self):
+        """
+        populates instance variables like first_female and last
+        for efficient access.
+        """
+        self.first_female = Names.get_first_female_names()
+        self.last_2010 = Names.get_last_names_2010()
+
+    @staticmethod
+    def get_first_female_names():
+        """
+        reads data file containing first female names
+        :return: set containing names
+        """
         filename = './data/names/dist.female.first'
 
         # use pandas to get data
@@ -23,30 +36,40 @@ class Names:
         series = df.iloc[:, 0]
         series.dropna(inplace=True)
 
-        # convert pandas series to set, store in instance variable
-        self.first_female = set(series)
+        # convert pandas series to set
+        return set(series)
 
-    def populate_last(self):
+    @staticmethod
+    def get_last_names_2010():
+        """
+        reads data file containing last names
+        :return: set containing names
+        """
         filename = './data/names/Names_2010Census_Top1000.csv'
 
         # use pandas to get data
-        df = pd.read_csv(filename)
-        series = df.iloc[:, 0]
-        series.dropna(inplace=True)
+        # https://stackoverflow.com/questions/42138966/pandas-read-csv-ignore-commas-one-column-per-line
+        df_last = pd.read_csv(filename, sep=',')
+        # df_last = pd.read_csv(filename)
+        series_last = df_last.iloc[:, 0]
+        series_last.dropna(inplace=True)
+        series_last = series_last.str.strip()
 
         # convert pandas series to set, store in instance variable
-        self.last = set(series)
+        return set(series_last)
 
 
 if __name__ == "__main__":
 
+    pass
     names = Names()
-    names.populate_first_female()
+    names.populate_names()
     print(names.first_female)
-    names.populate_last()
-    print(names.last)
-
+    print(names.last_2010)
+    #
     if 'Kathy'.upper() in names.first_female:
         print('found Kathy')
-    if 'little'.upper() in names.last:
-        print('found little')
+    if 'smith'.upper() in names.last_2010:
+        print('found smith')
+    if 'sims'.upper() in names.last_2010:
+        print('found sims')
